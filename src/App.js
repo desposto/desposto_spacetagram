@@ -31,7 +31,7 @@ function App() {
             Spacetagram
           </div>
           {images.map((image, index) =>(
-            <ImageBox key = {index} image={image}/>
+            <ImageBox key = {index} image={image} index={index}/>
           ))}
         </div>
       </div>

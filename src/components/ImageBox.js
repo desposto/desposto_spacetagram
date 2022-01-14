@@ -1,7 +1,7 @@
 import React from 'react'
 import LikeButton from './LikeButton';
 
-const ImageBox = ({image}) => {
+const ImageBox = ({image, index}) => {
     return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg my-2 mx-2 bg-white">
         <div className='flex pt-2'>
@@ -15,7 +15,7 @@ const ImageBox = ({image}) => {
         <img src={image.url} alt ="" className ="w-full"/>
         <div className="px-4 py-2">
         <div>
-            <LikeButton/>
+            <LikeButton index = {index}/>
         </div>
         </div>
         <div className="px-4 py-0.5 mb-2">
