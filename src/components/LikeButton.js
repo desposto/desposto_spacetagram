@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { FaRocket } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+
+
 export default function LikeButton({ index }) {
   const [isLiked, setIsLiked] = useState(
     localStorage.getItem(String(index)) === "true"
@@ -20,11 +22,10 @@ export default function LikeButton({ index }) {
       <button
         onClick={handleLike}
         className={` flex items-start justify-center p-2 text-white bg-gray-400 rounded hover:bg-gray-600 hover:shadow-xl ${
-          isLiked && "text-red-500"
+          isLiked && "text-red-400"
         } bg-none`}
       >
-        <span className="text-lg"><FaRocket /></span>
-        <span className="text-lg">Like</span>
+        <span className="text-lg"><FaHeart /></span>
       </button>
     </div>
   );
