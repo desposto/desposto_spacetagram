@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
-
 export default function LikeButton({ index }) {
   const [isLiked, setIsLiked] = useState(
     localStorage.getItem(String(index)) === "true"
@@ -25,7 +24,9 @@ export default function LikeButton({ index }) {
           isLiked && "text-red-400"
         } bg-none`}
       >
-        <span className="text-lg"><FaHeart /></span>
+        <span className="text-lg">
+          <FaHeart />
+        </span>
       </button>
     </div>
   );

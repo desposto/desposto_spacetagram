@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import LikeButton from "./LikeButton";
 
 const ImageBox = ({ image, index }) => {
-
-  const [isReadMore, setIsReadMore] = useState(true);//state to reack if user has selected readmore
+  const [isReadMore, setIsReadMore] = useState(true); //state to reack if user has selected readmore
   const handleReadMore = () => {
     //sets isLiked to the opposite of the current isReadMore
     setIsReadMore(!isReadMore);
@@ -22,7 +21,7 @@ const ImageBox = ({ image, index }) => {
         </div>
       </div>
       <div className="px-4 py-1 mb-3">
-        <div className={`text-black text-sm ${isReadMore && "line-clamp-3"}`}> 
+        <div className={`text-black text-sm ${isReadMore && "line-clamp-3"}`}>
           {image.explanation}
         </div>
         <button

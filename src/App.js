@@ -54,7 +54,6 @@ function App() {
               .map((image, index) => (
                 <ImageBox key={index} image={image} index={index} />
               ))}
-            
           </div>
         </div>
       )}
