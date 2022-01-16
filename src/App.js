@@ -5,27 +5,35 @@ import APILoadingScreen from "./components/APILoadingScreen";
 
 var today = new Date();
 var day = String(today.getDate()).padStart(2, "0");
-var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0
 var year = today.getFullYear();
-var defaultStartDate = "2022-" + "01" + "-" + "03";
-var defualtEndDate = year + "-" + month + "-" + day;
+var startDate = "2021-" + "11" + "-" + "10";
+var endDate = year + "-" + month + "-" + day;
 
 function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    apiFetch();
+  }, []);
+
+  function apiFetch() {
     fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=${defaultStartDate}&end_date=${defualtEndDate}`
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=${startDate}&end_date=${endDate}`
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setImages(data);
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].media_type === "image") {
+            setImages((arr) => [...arr, data[i]]);
+          }
+        }
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }
 
   return (
     <div className="container mx-auto cursor-pointer">
@@ -36,11 +44,17 @@ function App() {
           <div className="grid grid-cols-1 bg-gray-100">
             <div className="ml-3 grid-rows-2">
               <div className="font-bold">Spacetagram</div>
-              <div className="text-sm">Brought to you by NASA Picture of the Day API</div>
+              <div className="text-sm">
+                Brought to you by NASA Picture of the Day API
+              </div>
             </div>
-            {images.map((image, index) => (
-              <ImageBox key={index} image={image} index={index} />
-            ))}
+            {images
+              .slice(0)
+              .reverse()
+              .map((image, index) => (
+                <ImageBox key={index} image={image} index={index} />
+              ))}
+            
           </div>
         </div>
       )}
