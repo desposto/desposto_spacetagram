@@ -21,7 +21,7 @@ export default function LikeButton({ index }) {
     <div>
       <button
         onClick={handleLike}
-        className={` flex items-start justify-center p-2 text-white bg-gray-400 rounded hover:bg-gray-600 hover:shadow-xl ${
+        className={` flex justify-center p-2 text-white bg-gray-400 rounded hover:bg-gray-600 hover:shadow-xl ${
           isLiked && "text-red-400"
         } bg-none`}
       >
