@@ -22,13 +22,11 @@ export default function LikeButton({ index }) {
       {/* if state isLiked is true than the like button will fill red*/}
       <button
         onClick={handleLike}
-        className={` flex justify-center p-2 text-white bg-gray-400 rounded hover:bg-gray-600 hover:shadow-xl ${
+        className={` flex justify-center p-2 text-white text-xl bg-gray-400 rounded-xl hover:bg-gray-600 hover:shadow-xl ${
           isLiked && "text-red-400"
         } bg-none`}
       >
-        <span className="text-lg">
-          <FaHeart />
-        </span>
+          <FaHeart />    
       </button>
     </div>
   );
