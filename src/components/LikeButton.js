@@ -3,7 +3,8 @@ import { FaHeart } from "react-icons/fa";
 
 export default function LikeButton({ index }) {
   const [isLiked, setIsLiked] = useState(
-    localStorage.getItem(String(index)) === "true"
+    //State to track if user has liked the image
+    localStorage.getItem(String(index)) === "true" //sets the localStorage key to the index of the image
   );
 
   React.useEffect(() => {
@@ -18,6 +19,7 @@ export default function LikeButton({ index }) {
 
   return (
     <div>
+      {/* if state isLiked is true than the like button will fill red*/}
       <button
         onClick={handleLike}
         className={` flex justify-center p-2 text-white bg-gray-400 rounded hover:bg-gray-600 hover:shadow-xl ${
