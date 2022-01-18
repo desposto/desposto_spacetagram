@@ -2,7 +2,7 @@
 
 This is my submission for Shopify's Summer 2022 Front-End Developer Intern Challenge!
 
-[** 🚀 Click here to access Spacetagram**](desposto-spacetagram-aeqz2fw57-desposto.vercel.app)  - Hosted with Vercel
+[** 🚀 Click here to access Spacetagram**](https://desposto-spacetagram-aeqz2fw57-desposto.vercel.app/)  - Hosted with Vercel
 
 The application was developed using React and Tailwind.
 
