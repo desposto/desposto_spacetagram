@@ -10,7 +10,7 @@ export default function LikeButton({ index }) {
   React.useEffect(() => {
     //retrieve saved likes from local storage when a page reloads
     localStorage.setItem(String(index), isLiked);
-  }, [isLiked]);
+  }, [isLiked,index]);
 
   const handleLike = () => {
     //sets isLiked to the opposite of the current isLiked
