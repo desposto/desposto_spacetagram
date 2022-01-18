@@ -7,7 +7,7 @@ var today = new Date();
 var day = String(today.getDate()).padStart(2, "0");
 var month = String(today.getMonth() + 1).padStart(2, "0"); 
 var year = today.getFullYear();
-var startDate = "2021-" + "11" + "-" + "10";
+var startDate = "2021-11-10";
 var endDate = year + "-" + month + "-" + day; //end date is set to current day
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
               .map(
                 (
                   image,
-                  index //maps the images and their index number to the ImageBox component
+                  index //maps the images and their index to the ImageBox component
                 ) => (
                   <ImageBox key={index} image={image} index={index} />
                 )
