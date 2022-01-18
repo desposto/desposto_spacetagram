@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageBox from "./components/ImageBox";
 import APILoadingScreen from "./components/APILoadingScreen";
+import { FaGithub } from "react-icons/fa";
 
 //Variables used to set the start and end dates for API access
 var today = new Date();
@@ -45,9 +46,12 @@ function App() {
           <div className="grid grid-cols-1 bg-gray-100">
             <div className="ml-3 grid-rows-2">
               <div className="font-bold">Spacetagram</div>
-              <div className="text-sm">
+              <div className="text-base">
                 Brought to you by NASA Picture of the Day API
               </div>
+              <a href="https://github.com/desposto/desposto_spacetagram" className="w-full flex justify-left text-base hover:text-blue-600">
+               Built by David Esposto: github  <FaGithub/>
+              </a>
             </div>
             {images
               .slice(0)
