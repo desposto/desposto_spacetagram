@@ -6,16 +6,16 @@ The application was developed using React and Tailwind.
 
 ## **Demo** - Additional features include loading screen when fetching data from NASA's API and saved likes in local storage when user reloads the page
 
-![Image1](demo\SpacetagramDemo.gif)
+![Image1](/demo/SpacetagramDemo.gif)
 
 
 
 
 ## **UI screen Captures**
 
-![Image1](demo\Spacetagram_Capture1.JPG)
+![Image1](/demo/Spacetagram_Capture1.JPG)
 
-![Image1](demo\Spacetagram_Capture3.JPG)
+![Image1](/demo/Spacetagram_Capture3.JPG)
 
 ## **To use with local download**
 1. Clone repo to desired directory
