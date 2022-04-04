@@ -1,6 +1,4 @@
-# **David Esposto - Shopify Frontend Developer Intern Callenge 2022**
-
-This is my submission for Shopify's Summer 2022 Front-End Developer Intern Challenge!
+# **David Esposto - Spacetagram**
 
 [** 🚀 Click here to access Spacetagram**](https://desposto-spacetagram-aeqz2fw57-desposto.vercel.app/)  - Hosted with Vercel
 
